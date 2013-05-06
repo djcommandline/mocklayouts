@@ -1,13 +1,7 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+
 
 /* ==========================================================================
-   Base styles: opinionated defaults
+   HTML5BP DEFAULTS
    ========================================================================== */
 
 html,
@@ -23,12 +17,6 @@ body {
     line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -39,9 +27,6 @@ body {
     text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
 
 hr {
     display: block;
@@ -52,17 +37,9 @@ hr {
     padding: 0;
 }
 
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
 img {
     vertical-align: middle;
 }
-
-/*
- * Remove default fieldset styles.
- */
 
 fieldset {
     border: 0;
@@ -70,17 +47,9 @@ fieldset {
     padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
 textarea {
     resize: vertical;
 }
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
 
 .chromeframe {
     margin: 0.2em 0;
@@ -90,32 +59,168 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Custom styles
+   
+   Try to follow http://twitter.github.io/recess/ standards: 
+   position, top, right, bottom, left
+   display, width, height, padding, margin, (box modeling)
+   font, leading, color, text (typeography)
+   background and border 
+   CSS3 properties like border-radius and box-shadow
+   and a handful of other purely visual properties
+   
+    position: relative;
+    display: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    Contain Floats using 
+    overflow:hidden
+
+
    ========================================================================== */
 
 
+#outter-wrap {
+    width: 100%;        
+}
+
+#inner-wrap {
+    width: 100%;
+}
 
 
+#header {
+    width: 1004px;
+    padding: 10px 10px;
+    margin: 10px auto 0 auto;
+}
+
+#content {
+    width: 1004px; /* 1024px - l + r padding */
+    min-height: 500px;	
+    padding: 10px 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
 
+.main {
+    width: 684px;
+    min-height: 500px;    
+}
 
 
+.aside {
+    width: 300px;
+    min-height: 500px;
+}
+
+.aside.lay-left {
+    float: left;
+}
+
+.aside.lay-right {
+    float: right;
+}
 
 
-
-
-
-
-
+#footer {    
+    width: 1004px;
+    padding: 10px 10px;
+    margin: 0px auto 10px auto; 
+    overflow: hidden;  
+}
 
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 
-/*
- * Image replacement
- */
+.bg-grey {
+    background: #f0f0f0;
+}
+
+.trbl-borders {
+    border: 1px solid #000;
+    border-style: solid solid solid solid;
+}
+
+
+.trl-borders {
+    border: 1px solid #000;
+    border-style: solid solid none;
+}
+
+.rbl-borders {
+    border: 1px solid #000;
+    border-style: none solid solid;
+}
+
+
+.lr-borders {
+    border: 1px solid #000;
+    border-style: none solid;
+}
+
+.lrb-borders {
+    border: 1px solid #000;
+    border-style: none solid solid;
+}
+
+.tb-borders {
+    border: 1px solid #000;
+    border-style: none solid;
+}
+
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.c6 > .box {
+    width: 150px;
+    float: left;
+    min-height: 100px;
+    background: #f0f0f0;
+    margin-right: 20px;
+}
+
+
+
+
+/*  ------------------------------
+    float classes
+    ------------------------------ */
+.set-left, .float-left{
+    float: left;
+}
+.set-right, .float-right {
+    float: right;
+}
+.set-center {
+    float: none;
+    margin: 0 auto;    
+}
+
+/*  ------------------------------
+    w1024px
+    ------------------------------ */
+.w1024 {
+    width: 1024px;
+}
+
+
+
+
+
+
+
+
+
+
 
 .ir {
     background-color: transparent;
@@ -132,18 +237,10 @@ textarea {
     height: 150%;
 }
 
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
 .hidden {
     display: none !important;
     visibility: hidden;
 }
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
 
 .visuallyhidden {
     border: 0;
@@ -156,11 +253,6 @@ textarea {
     width: 1px;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -171,25 +263,9 @@ textarea {
     width: auto;
 }
 
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
 .invisible {
     visibility: hidden;
 }
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 
 .clearfix:before,
 .clearfix:after {
@@ -201,11 +277,6 @@ textarea {
     clear: both;
 }
 
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
 .clearfix {
     *zoom: 1;
 }
@@ -216,9 +287,6 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
