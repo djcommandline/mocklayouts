@@ -63,6 +63,16 @@ textarea {
     default tag styling h1, a, ul, li   
    ========================================================================== */
 
+a:link,
+a:visited, {
+    color: blue;
+}
+
+a:hover,
+a:active {
+    color: grey;
+}
+
 /* headings */
 h1, h2, h3, h4, h5, h6 {
     color: #000000;
@@ -125,7 +135,6 @@ ol li {
 /* forms */
 
 
-
 .square-submit-btn {
     display: block;
     float: left;
@@ -168,9 +177,11 @@ ol li {
 /* wrappers */
 #outter-wrap {
     width: 100%;        
+    overflow: hidden;
 }
 
 #inner-wrap {
+    overflow: hidden;
     width: 100%;
 }
 
