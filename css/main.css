@@ -13,8 +13,8 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 ::-moz-selection {
@@ -58,8 +58,91 @@ textarea {
     padding: 0.2em 0;
 }
 
+
 /* ==========================================================================
-   Custom styles
+    default tag styling h1, a, ul, li   
+   ========================================================================== */
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0 0 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0 0 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 0 0 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 0 0 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 0 0 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 0 0 2.33em 0;
+}
+
+ul.nostyle, ol.nostyle {
+    list-style-type: none;
+    padding: 0px;
+}
+
+/* lists */
+ul {
+    
+}
+
+ol {
+    
+}
+
+ul li {
+    
+}
+
+ol li {
+    
+}
+
+
+
+/* forms */
+
+
+
+.square-submit-btn {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    text-indent: -9999px;
+    background: #fff;
+    border: 1px solid blue;
+}
+
+
+
+
+/* ==========================================================================
+   Custom styles for Layouts
    
    Try to follow http://twitter.github.io/recess/ standards: 
    position, top, right, bottom, left
@@ -82,7 +165,7 @@ textarea {
 
    ========================================================================== */
 
-
+/* wrappers */
 #outter-wrap {
     width: 100%;        
 }
@@ -92,10 +175,12 @@ textarea {
 }
 
 
+/* layout divs - check out elsewhere for specific stylings */
 #header {
     width: 1004px;
     padding: 10px 10px;
     margin: 10px auto 0 auto;
+    overflow: hidden;
 }
 
 #content {
@@ -107,24 +192,24 @@ textarea {
 }
 
 
-.main {
-    width: 684px;
-    min-height: 500px;    
-}
+    .main {
+        width: 684px;
+        min-height: 500px;    
+    }
 
 
-.aside {
-    width: 300px;
-    min-height: 500px;
-}
+    .aside {
+        width: 300px;
+        min-height: 500px;
+    }
 
-.aside.lay-left {
-    float: left;
-}
+    .aside.lay-left {
+        float: left;
+    }
 
-.aside.lay-right {
-    float: right;
-}
+    .aside.lay-right {
+        float: right;
+    }
 
 
 #footer {    
@@ -134,15 +219,37 @@ textarea {
     overflow: hidden;  
 }
 
+/* header styling */
+
+
+
+
+/* content styling */
+
+
+
+
+/* main styling */
+
+
+
+
+
+/* form styling */
+
+
+
+
+
+
 
 /* ==========================================================================
-   Helper classes
+   helper classes
    ========================================================================== */
 
-.bg-grey {
-    background: #f0f0f0;
-}
 
+
+/* borders */
 .trbl-borders {
     border: 1px solid #000;
     border-style: solid solid solid solid;
@@ -176,10 +283,50 @@ textarea {
 }
 
 
+/* margins */
 .no-margin {
     margin: 0px !important;
 }
 
+
+
+/*  ------------------------------
+    media object
+    ------------------------------ */
+.media { 
+    margin:10px; 
+}
+.media, .bd {
+    overflow:hidden; 
+    _overflow:visible; 
+    zoom:1;
+}
+.media, .bd-wrap {
+    
+}
+.media .img {
+    float:left;
+    margin-right: 10px;
+}
+.media .img img{
+    display:block;
+}
+.media .imgExt{
+    float:right; 
+    margin-left: 10px;
+}
+
+
+/*  ------------------------------
+    columns
+    ------------------------------ */
+.c2 > .box {
+    width: 240px;
+    float: left;
+    min-height: 100px;
+    background: #f0f0f0;
+    margin-right: 20px;
+}
 .c6 > .box {
     width: 150px;
     float: left;
@@ -188,7 +335,12 @@ textarea {
     margin-right: 20px;
 }
 
-
+/*  ------------------------------
+    width 
+    ------------------------------ */
+.w100 {
+    width: 100%;
+}
 
 
 /*  ------------------------------
@@ -197,9 +349,21 @@ textarea {
 .set-left, .float-left{
     float: left;
 }
+
+.set-left img, .float-left img{
+    float: left;
+    margin-right: 10px;
+}
+
 .set-right, .float-right {
     float: right;
 }
+
+
+.set-right img, .float-right img {
+    margin-left: 10px;
+}
+
 .set-center {
     float: none;
     margin: 0 auto;    
@@ -214,6 +378,12 @@ textarea {
 
 
 
+/*  ------------------------------
+    debug helper classes
+    ------------------------------ */
+.bg-grey {
+    background: #f0f0f0;
+}
 
 
 
@@ -221,6 +391,11 @@ textarea {
 
 
 
+
+
+/*  ------------------------------
+    htmlbp helpers
+    ------------------------------ */
 
 .ir {
     background-color: transparent;
