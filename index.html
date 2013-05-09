@@ -22,6 +22,59 @@
         <link rel="stylesheet" href="css/ie.css">
         <![endif]-->
 
+
+        <style type="text/css">
+
+        #content {
+            min-height: 2190px;
+        }
+
+        .searchbar {
+            padding: 2px;
+            border: 1px solid #c6c6c6;
+            margin-right: 20px;
+            margin-top: 46px;
+            width: 393px;
+            height: 30px;
+
+        }
+
+        .searchbar input {
+            font-size: 18px;
+        }
+
+        .searchbar .text-input {
+            float: left;
+            width: 350px;
+            margin-top: 2px;
+            margin-right: 6px;
+            border: 0px;
+            padding: 2px;
+        }
+
+        .searchbar .text-input:focus {
+            outline-width: 0;
+        }
+
+        .searchbar .submit-btn {
+            float: left;
+        }
+
+        a, a:link, a:visited, {
+            color: #1d87c9
+            text-decoration: none;
+        }
+
+        a:hover, a:active {
+            color: #1d87c9;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+            filter: alpha(opacity=80);
+            opacity: .8;
+        }
+
+
+        </style>
+
     </head>    
     <body>
         <!--[if lt IE 7]>
@@ -32,11 +85,11 @@
         <div id="outter-wrap">
             <div id="inner-wrap">
                 
-                <div id="header" class="trl-borders bg-grey set-center w1024">
+                <div id="header" class="set-center w1024">
 
-                    <img class="set-left" src="http://placehold.it/584x100" alt="">
+                    <img class="set-left" src="./img/logo/logo.png" alt="">
 
-                    <div class="searchbar set-right">
+                    <div class="searchbar set-right hidden">
                         <form action="#">
                             <fieldset>
                             <legend>Find People, Jobs, Companies, and More</legend>
@@ -47,25 +100,21 @@
                             </fieldset>
                         </form>
                     </div>
-
     
                     <div class="searchbar set-right">
                         <form action="#" id="search_box">
                             <div>
-                                <input type="text" id="search" name="search" placeholder="Search for Music" />
-                                <input class="submit" type="submit" name="submit" value="Submit Form">
+                                <input class="text-input" type="text" id="search" name="search" placeholder="Search for Music" />
+                                <input class="image-submit-btn" type="image" src="./img/buttons/search-submit-btn.png" alt="Submit">
                             </div>
                         </form>
-                        <div class="tips">TRY: HOTTEST CAR / BESY DIY TIPS / BEST GADGET EVER</div>
+                        <div class="tips hidden">TRY: HOTTEST CAR / BESY DIY TIPS / BEST GADGET EVER</div>
                     </div>
-    
-
-
 
                 </div><!-- #/header -->
 
-                <div id="content" class="rbl-borders">
-                    <div class="main bg-grey set-left">
+                <div id="content" class="">
+                    <div class="main bg-white set-right">
     
 
                         <h1>H1 Title Heading</h1>
@@ -119,79 +168,125 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, sit, expedita vitae exercitationem quidem sunt soluta dignissimos inventore similique sint ullam magni facilis culpa facere fuga sed error nesciunt blanditiis.
                         </p>
 
+                        <div class="tags"> 
+                            <b>TAGS</b> 
+                            <a href="#">cars</a>, 
+                            <a href="#">women</a>, 
+                            <a href="#">water guns</a>
+                        </div>
+
+
+                        <div class="related_stories"> 
+                            <h2 class="m-0 mb-0 mt-25">RELATED STORIES</h2>
+                            <ul class="nostyle">
+                                <li><a href="#">STORY LINK 1</a></li>
+                                <li><a href="#">STORY LINK 2</a></li>
+                                <li><a href="#">STORY LINK 3</a></li>
+                                <li><a href="#">STORY LINK 4</a></li>
+                                <li><a href="#">STORY LINK 5</a></li>
+                            </ul>
+                        </div>
+
+
                     </div><!-- /#main -->
 
 
-                    <div class="aside bg-grey set-right">
+                    <div class="aside bg-grey set-left">
                         RIGHT SIDE  
                     </div><!-- /#aside -->
                 </div><!-- /#content -->   
 
-                <div id="footer" class="rbl-borders">
+                <div id="footer" class="">
+
+                    <div style="width: 100%; padding: 100px 0px;">                        
+                        <div class="searchbar set-center">
+                            <form action="#" id="search_box">
+                                <div>
+                                    <input class="text-input" type="text" id="search" name="search" placeholder="Search for Music" />
+                                    <input class="image-submit-btn" type="image" src="./img/buttons/search-submit-btn.png" alt="Submit">
+                                </div>
+                            </form>
+                            <div class="tips hidden">TRY: HOTTEST CAR / BESY DIY TIPS / BEST GADGET EVER</div>
+                        </div>                        
+                    </div>
+    
 
                     <div class="c6">
-                        <div class="box">
+                        <div class="box br">
                             <h5>COLUMN TITLE</h5>
                             <ul class="nostyle">
-                                <li><a href="#"></a>link 1</li>
-                                <li><a href="#"></a>link 2</li>
-                                <li><a href="#"></a>link 3</li>
-                                <li><a href="#"></a>link 4</li>
-                                <li><a href="#"></a>link 5</li>
-                                <li><a href="#"></a>link 6</li>
+                                <li><a href="#">link 1</a></li>
+                                <li><a href="#">link 2</a></li>
+                                <li><a href="#">link 3</a></li>
+                                <li><a href="#">link 4</a></li>
+                                <li><a href="#">link 5</a></li>
+                                <li><a href="#">link 6</a></li>
                             </ul>   
                         </div>
-                        <div class="box">
+                        <div class="box br">
+                            <h5>COLUMN TITLE</h5>
                             <ul class="nostyle">
-                                <li><a href="#"></a>link 1</li>
-                                <li><a href="#"></a>link 2</li>
-                                <li><a href="#"></a>link 3</li>
-                                <li><a href="#"></a>link 4</li>
-                                <li><a href="#"></a>link 5</li>
-                                <li><a href="#"></a>link 6</li>
-                            </ul>                            
+                                <li><a href="#">link 1</a></li>
+                                <li><a href="#">link 2</a></li>
+                                <li><a href="#">link 3</a></li>
+                                <li><a href="#">link 4</a></li>
+                                <li><a href="#">link 5</a></li>
+                                <li><a href="#">link 6</a></li>
+                            </ul>   
                         </div>
-                        <div class="box">
+                        <div class="box br">
+                            <h5>COLUMN TITLE</h5>
                             <ul class="nostyle">
-                                <li><a href="#"></a>link 1</li>
-                                <li><a href="#"></a>link 2</li>
-                                <li><a href="#"></a>link 3</li>
-                                <li><a href="#"></a>link 4</li>
-                                <li><a href="#"></a>link 5</li>
-                                <li><a href="#"></a>link 6</li>
-                            </ul>
+                                <li><a href="#">link 1</a></li>
+                                <li><a href="#">link 2</a></li>
+                                <li><a href="#">link 3</a></li>
+                                <li><a href="#">link 4</a></li>
+                                <li><a href="#">link 5</a></li>
+                                <li><a href="#">link 6</a></li>
+                            </ul>   
                         </div>
-                        <div class="box">
+                        <div class="box br">
+                            <h5>COLUMN TITLE</h5>
                             <ul class="nostyle">
-                                <li><a href="#"></a>link 1</li>
-                                <li><a href="#"></a>link 2</li>
-                                <li><a href="#"></a>link 3</li>
-                                <li><a href="#"></a>link 4</li>
-                                <li><a href="#"></a>link 5</li>
-                                <li><a href="#"></a>link 6</li>
-                            </ul>
+                                <li><a href="#">link 1</a></li>
+                                <li><a href="#">link 2</a></li>
+                                <li><a href="#">link 3</a></li>
+                                <li><a href="#">link 4</a></li>
+                                <li><a href="#">link 5</a></li>
+                                <li><a href="#">link 6</a></li>
+                            </ul>   
                         </div>
-                        <div class="box">
+                        <div class="box br">
+                            <h5>COLUMN TITLE</h5>
                             <ul class="nostyle">
-                                <li><a href="#"></a>link 1</li>
-                                <li><a href="#"></a>link 2</li>
-                                <li><a href="#"></a>link 3</li>
-                                <li><a href="#"></a>link 4</li>
-                                <li><a href="#"></a>link 5</li>
-                                <li><a href="#"></a>link 6</li>
-                            </ul>
+                                <li><a href="#">link 1</a></li>
+                                <li><a href="#">link 2</a></li>
+                                <li><a href="#">link 3</a></li>
+                                <li><a href="#">link 4</a></li>
+                                <li><a href="#">link 5</a></li>
+                                <li><a href="#">link 6</a></li>
+                            </ul>   
                         </div>
                         <div class="box no-margin">
+                            <h5>COLUMN TITLE</h5>
                             <ul class="nostyle">
-                                <li><a href="#"></a>link 1</li>
-                                <li><a href="#"></a>link 2</li>
-                                <li><a href="#"></a>link 3</li>
-                                <li><a href="#"></a>link 4</li>
-                                <li><a href="#"></a>link 5</li>
-                                <li><a href="#"></a>link 6</li>
-                            </ul>
+                                <li><a href="#">link 1</a></li>
+                                <li><a href="#">link 2</a></li>
+                                <li><a href="#">link 3</a></li>
+                                <li><a href="#">link 4</a></li>
+                                <li><a href="#">link 5</a></li>
+                                <li><a href="#">link 6</a></li>
+                            </ul>   
                         </div>
                     </div>
+
+                    <hr>
+
+                    <p class="text-center">
+                    2013 Hearst Communication, Inc All Rights Reserved. Being Green / Whye did i get this add?
+                    </p>
+
+                    <hr>
 
                 </div><!-- /#footer -->
     
@@ -206,6 +301,12 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // $('#outter-wrap').css({'background' : 'url(./img/placeholder/layout1.png) no-repeat center top'});
+            });
+        </script>
 
 
         <!-- Analytics + Tracking -->
