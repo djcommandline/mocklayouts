@@ -139,6 +139,122 @@ ol li {
     
 }
 
+h2.style-1 {
+    color: #fff;
+    background: #000;
+    text-indent: 1em;
+    padding: 1px 0;
+    font-size: 18px;
+    margin: 0 0 0 0;
+}
+
+h2.style-1:before {
+    content: "";
+    font-size: 0px;
+    line-height: 0;
+    padding: 0px;
+ 
+    margin-top: 28px;
+    margin-left: -10px;
+    position: absolute;
+    border-color: black black transparent transparent;
+    border-style:solid;
+    border-width:6px;
+    width:0;
+    height:0;
+}
+
+ol.style-1 {
+    margin-top: 0;
+    padding: 10px 0;
+    border: solid 1px #cccccc;
+    border-style: none solid solid solid; 
+}
+
+ol.style-1 li {
+    padding: 10px 10px 10px 15px;
+    list-style-position: inside;
+    margin: 0;
+    background: #f0f0f0; 
+    color: #999;
+    font-weight: bold;    
+}
+
+ol.style-1 li:nth-child(even) {
+    background: #fff;
+}
+
+ol.style-1 li a {
+    margin-left: 10px;
+}
+
+
+ol.style-1 {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+ol.style-1 > li {
+  counter-increment: customlistcounter;
+}
+
+ol.style-1 > li:before {
+    content: counter(customlistcounter) " ";
+    font-weight: bold;
+    float: left;
+    width: 1.7em;
+    height: 1.7em;
+    text-align: center;
+    border-radius: 1.5em;
+    background: #ff7826;
+    color: #fff;
+    line-height: 1.8em;
+    margin-top: -2px;
+}
+
+ol.style-1:first-child {
+  counter-reset: customlistcounter;
+}
+
+
+/* arrows */
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;    
+    border-bottom: 5px solid black;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;    
+    border-top: 5px solid black;
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+}
+
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent; 
+    border-right:5px solid black; 
+}
+
+
+
+
+
 
 
 /* forms */
@@ -272,8 +388,6 @@ ol li {
 /* ==========================================================================
    helper classes
    ========================================================================== */
-
-
 
 /* borders */
 .trbl-borders {
